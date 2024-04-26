@@ -57,7 +57,7 @@ class HeighLightInfo extends StatelessWidget {
                   ],
                 )
               ],
-            ),
+            )
 
           : Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
