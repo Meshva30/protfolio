@@ -7,7 +7,7 @@
 <img src='https://github.com/Meshva30/protfolio/assets/136339359/77272dc4-584e-4df6-96f8-e7ef1c4e7831' width = 300>&nbsp;&nbsp;&nbsp;&nbsp;
   
   <div align="center">
-    <a href="https://github.com/Meshva30/advflutterch1/tree/master/lib/theme_change">👉 📚 Go to dart file 📚 👈</a>
+    <a href="https://github.com/Meshva30/protfolio/tree/master/lib">👉 📚 Go to dart file 📚 👈</a>
 
 <video src="https://github.com/Meshva30/protfolio/assets/136339359/e5454759-2c08-4f13-92da-9a593919e5eb" width="400">
   </div>
