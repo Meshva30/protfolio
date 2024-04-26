@@ -26,14 +26,14 @@ class AnimatedCircularProgressIndicator extends StatelessWidget {
               fit: StackFit.expand,
               children: [
                 CircularProgressIndicator(
-                  value: 0.8,
+                  value: value,
                   color: primaryColor,
                   backgroundColor: darkColor,
                 ),
                 Center(
                   child: Text(
                     (value * 100).toInt().toString() + "%",
-                    style: Theme.of(context).textTheme.subtitle1,
+                    style: Theme.of(context).textTheme.titleMedium,
                   ),
                 ),
               ],
@@ -47,7 +47,7 @@ class AnimatedCircularProgressIndicator extends StatelessWidget {
           maxLines: 1,
           overflow: TextOverflow.ellipsis,
           label,
-          style: Theme.of(context).textTheme.subtitle2,
+          style: Theme.of(context).textTheme.titleSmall,
         )
       ],
     );
@@ -63,6 +63,7 @@ class AnimationLinearProgressIndicator extends StatelessWidget {
   });
   final double percentage;
   final String lable;
+
   @override
   Widget build(BuildContext context) {
     return Padding(

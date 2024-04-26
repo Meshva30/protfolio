@@ -35,9 +35,9 @@ class HomeBanner extends StatelessWidget {
               children: [
                 Text(
                   "Discover my Amazing \n Art Space!",
-                  style: Responsive.isDesktop(context)? Theme.of(context).textTheme.headline3!.copyWith(
+                  style: Responsive.isDesktop(context)? Theme.of(context).textTheme.displaySmall!.copyWith(
                       fontWeight: FontWeight.bold, color: Colors.white
-                  ):Theme.of(context).textTheme.headline5!.copyWith(
+                  ):Theme.of(context).textTheme.headlineSmall!.copyWith(
                       fontWeight: FontWeight.bold, color: Colors.white
                 ),
                 ),
@@ -79,7 +79,7 @@ class MyBulidAnimatedText extends StatelessWidget {
   Widget build(BuildContext context) {
     return DefaultTextStyle(
       maxLines: 1,
-      style: Theme.of(context).textTheme.subtitle1!,
+      style: Theme.of(context).textTheme.titleMedium!,
       child: Row(
         children: [
           if(!Responsive.isMobileLarge(context)) FlutterCodeText(),

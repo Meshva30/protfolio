@@ -30,9 +30,9 @@ class HeighLightInfo extends StatelessWidget {
                     HeighLight(
                       counter: AnimatedCounter(
                         value: 40,
-                        text: 'Videos',
+                        text: '+',
                       ),
-                      label: "Subscribers",
+           label: 'Videos',
                     ),
                   ],
                 ),
@@ -71,9 +71,9 @@ class HeighLightInfo extends StatelessWidget {
                 HeighLight(
                   counter: AnimatedCounter(
                     value: 40,
-                    text: 'Videos',
+                    text: '+',
                   ),
-                  label: "Subscribers",
+                  label: "Videos",
                 ),
                 HeighLight(
                   counter: AnimatedCounter(
