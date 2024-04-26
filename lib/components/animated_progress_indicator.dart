@@ -1,0 +1,96 @@
+
+import 'package:flutter/material.dart';
+
+import '../constants.dart';
+
+class AnimatedCircularProgressIndicator extends StatelessWidget {
+  const AnimatedCircularProgressIndicator({
+    super.key,
+    required this.percentage,
+    required this.label,
+  });
+
+  final double percentage;
+  final String label;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        AspectRatio(
+          aspectRatio: 1,
+          child: TweenAnimationBuilder(
+            tween: Tween<double>(begin: 0, end: percentage),
+            duration: defaultDuration,
+            builder: (context, double value, child) => Stack(
+              fit: StackFit.expand,
+              children: [
+                CircularProgressIndicator(
+                  value: 0.8,
+                  color: primaryColor,
+                  backgroundColor: darkColor,
+                ),
+                Center(
+                  child: Text(
+                    (value * 100).toInt().toString() + "%",
+                    style: Theme.of(context).textTheme.subtitle1,
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+        SizedBox(
+          height: defaultPadding / 2,
+        ),
+        Text(
+          maxLines: 1,
+          overflow: TextOverflow.ellipsis,
+          label,
+          style: Theme.of(context).textTheme.subtitle2,
+        )
+      ],
+    );
+  }
+}
+
+
+class AnimationLinearProgressIndicator extends StatelessWidget {
+  const AnimationLinearProgressIndicator({
+    super.key,
+    required this.percentage,
+    required this.lable,
+  });
+  final double percentage;
+  final String lable;
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(bottom: defaultPadding),
+      child: TweenAnimationBuilder(
+        tween: Tween<double>(begin: 0, end: percentage),
+        duration: defaultDuration,
+        builder: (context, double value, child) => Column(
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  lable,
+                  style: TextStyle(color: Colors.white),
+                ),
+                Text((value * 100).toInt().toString() + "%")
+              ],
+            ),
+            SizedBox(height: defaultPadding/2,),
+            LinearProgressIndicator(
+              value: value,
+              color: primaryColor,
+              backgroundColor: darkColor,
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
